@@ -1,9 +1,20 @@
-#  Телеграмм бот для проверки статуса работ на Devman
+#  Телеграмм бот для проверки статуса работ на Devman notification_bot_docker
 ### Как пользоваться
 
-* Скачайте данный репозиторий
+## Подготовка
 
-* Установите необходимые зависимости `pip install -r requirements.txt`
+- Убедитесь, что Docker установлен на вашей системе. Вы можете скачать и установить Docker с официального веб-сайта: [https://www.docker.com/get-started](https://www.docker.com/get-started)
+
+
+* Клонируйте репозиторий: `git clone https://github.com/ваш-пользователь/notification_bot_docker.git`
+
+
+* Перейдите в директорию проекта  `cd notification_bot_docker`
+* Соберите Docker-образ:  `docker build -t notification_bot .`
+* Запустите Docker-контейнер:  `docker run -d --name notification_bot_container notification_bot
+`
+* Убедитесь, что контейнер успешно запущен: `docker ps`
+* Чтобы остановить контейнер: `docker stop notification_bot_container`
 
 * Добавьте переменные окружения.\
   Для работы со скриптом  создайте и настройте файл с переменными окуржения `*.env`.\
@@ -31,14 +42,6 @@
 
 
  
-
-
-
-* Запустите скрипт с вашим чат ID
-
-  Пример запуска скрипта
-  
-  `python main.py 232434172`
  
 
 
