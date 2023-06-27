@@ -12,9 +12,13 @@
 * Перейдите в директорию проекта  `cd notification_bot_docker`
 * Создайте файл .env и укажите необходимые переменные окружения:
 
-  ` touch .env
-  echo "TG_BOT_TOKEN=1929883349:AAHydfdZd3hdDZiuXVkyvHr4izyNQ1c0nGU" >> .env `
-   
+  ``` touch .env
+  echo "TG_BOT_TOKEN=1929883349:AAHydfdZd3hdDZiuXVkyvHr4izyNQ1c0nGU" >> .env
+  
+  echo "TG_BOT_TOKEN=1929883349:AAHydfdZd3hdDZiuXVkyvHr4izyNQ1c0nGU" >> .env
+  
+  echo "TG_CHAT_ID=230938172" >> .env
+    ```
 * Соберите Docker-образ:  `docker build -t notification_bot .`
 * Запустите Docker-контейнер:  `docker run -d --name notification_bot_container notification_bot
 `
